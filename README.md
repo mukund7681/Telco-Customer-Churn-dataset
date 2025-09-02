@@ -1,50 +1,89 @@
-🔍 Insights & Findings
-📈 Technical Findings
+📊 Telco Customer Churn Prediction
+📌 Project Overview
 
-Data Quality & Preprocessing
+The objective of this project is to analyze the Telco Customer Churn dataset and build a predictive model to determine whether a customer is likely to churn.
 
-The dataset contained missing values in the TotalCharges column, which were handled by imputing with the median.
+Customer churn prediction is critical for telecom companies, as it helps in:
 
-customerID was dropped as it had no predictive power.
+Reducing customer attrition
 
-Categorical variables were encoded into numerical format for model compatibility.
+Increasing long-term profitability
+
+Designing targeted retention strategies
+
+📂 Dataset
+
+Source: Telco Customer Churn dataset
+
+Features: Customer demographics, account information, service usage, and contract/payment details
+
+Target Variable: Churn (Yes/No)
+
+🔧 Steps Performed
+
+Data Preprocessing
+
+Handled missing values (TotalCharges)
+
+Dropped non-useful identifiers (customerID)
+
+Encoded categorical variables
+
+Standardized numerical features
 
 Exploratory Data Analysis (EDA)
 
-Tenure & Churn: Customers with shorter tenure had a significantly higher probability of churn.
+Distribution of customer demographics
 
-Contract Type: Month-to-month contracts showed the highest churn rate, whereas customers on yearly contracts were more loyal.
+Churn patterns across contract types, payment methods, and services
 
-Payment Method: Electronic check users churned more frequently compared to those using credit cards or bank transfers.
-
-Services: Lack of multiple services (like internet + phone bundles) increased churn likelihood.
+Correlation analysis of features
 
 Feature Engineering
 
-Derived features from categorical variables to capture customer behavior patterns.
+Created derived variables
 
-Standardized numerical features (e.g., tenure, monthly charges) to improve model performance.
+Prepared balanced features for machine learning models
 
 Model Building & Evaluation
 
-Multiple models were tested (e.g., Logistic Regression, Random Forest, XGBoost).
+Implemented Logistic Regression, Random Forest, and XGBoost
 
-Hyperparameter tuning was performed to optimize accuracy and recall.
+Performed hyperparameter tuning
 
-The best-performing model achieved high accuracy and balanced precision-recall, making it suitable for churn detection.
+Evaluated models with Accuracy, Precision, Recall, and F1-score
+
+🔍 Insights & Findings
+📈 Technical Findings
+
+Customers with shorter tenure have higher churn probability.
+
+Month-to-month contracts are the riskiest, while long-term contracts reduce churn.
+
+Customers paying via Electronic Check churn more often.
+
+Bundled services (Internet + Phone) increase retention.
+
+The best model achieved strong accuracy and balanced precision-recall, making it reliable for churn detection.
 
 💡 Business Insights
 
-Customer Retention Risk: Short-tenure, month-to-month contract customers are most at risk of leaving.
+Retention Risk: New customers on flexible contracts are most likely to churn.
 
-Revenue Leakage: Customers on electronic check payments and single-service subscriptions contribute significantly to churn.
+Revenue Leakage: Electronic check payment users churn disproportionately.
 
-Retention Strategies:
+Strategies:
 
-Encourage long-term contracts through discounts or loyalty programs.
+Promote long-term contracts with incentives
 
-Target electronic check users with alternative, more stable payment methods.
+Encourage stable payment methods
 
-Cross-sell bundled services (Internet + Phone + TV) to improve retention.
+Bundle services to improve loyalty
 
-Predictive Model Utility: The churn prediction model enables proactive outreach — helping the business identify and engage at-risk customers before they churn.
+Value of Model: Helps proactively identify at-risk customers for timely engagement.
+
+⚙️ Technologies Used
+
+Python (pandas, NumPy, scikit-learn, matplotlib, seaborn, XGBoost)
+
+Jupyter Notebook for development and documentation
